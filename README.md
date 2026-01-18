@@ -1,7 +1,4 @@
 # secure-ad-azure-2025
-Here’s a professional, complete README.md for your GitHub project. It’s written so recruiters, instructors, or anyone viewing your repo can immediately understand your work. You can copy this into the root of your repo.
-
-⸻
 
 Secure Active Directory Deployment Using Windows Server 2025 in Azure
 
