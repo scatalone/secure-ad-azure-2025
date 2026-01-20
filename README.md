@@ -1,21 +1,47 @@
+# Secure Active Directory in Azure (2025) ![PowerShell](https://img.shields.io/badge/PowerShell-blue) ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=azure&logoColor=white) ![WindowsServer](https://img.shields.io/badge/Windows%20Server-0052CC?logo=windows&logoColor=white)
 
-Secure Active Directory in Azure (2025)   
+---
 
-Overview
+## Table of Contents
+- [Overview](#overview)  
+- [Quick Start](#quick-start)  
+- [Project Structure](#project-structure)  
+- [Setup Instructions](#setup-instructions)  
+- [Scripts Overview](#scripts-overview)  
+- [Security & Validation](#security--validation)  
+- [Future Enhancements](#future-enhancements)  
+- [Author](#author)  
 
-    This project demonstrates how to design, deploy, and secure an on‑premises style Active Directory environment hosted in Microsoft Azure. It is a hands-on portfolio project showing skills with:
-	•	Windows Server 2025
-	•	Active Directory Domain Services (AD DS)
-	•	PowerShell automation
-	•	Azure infrastructure
+---
 
-    The environment simulates a small enterprise domain with:
-	•	Dedicated domain controller in Azure
-	•	Structured OU and group design
-	•	Automated user and group creation
-	•	Security hardening through Group Policy
-	•	Documentation and visual evidence of configuration
+## Overview
 
+This project demonstrates how to design, deploy, and secure an on-premises style Active Directory environment hosted in Microsoft Azure. It is a **hands-on portfolio project** showing skills with:
+
+- Windows Server 2025  
+- Active Directory Domain Services (AD DS)  
+- PowerShell automation  
+- Azure infrastructure  
+
+The environment simulates a small enterprise domain with:
+
+- Dedicated domain controller in Azure  
+- Structured OU and group design  
+- Automated user and group creation  
+- Security hardening through Group Policy  
+- Documentation and visual evidence of configuration  
+
+---
+
+## Quick Start
+
+Clone the repository and run the scripts from an elevated PowerShell session on a Windows Server 2025 VM:
+
+```bash
+git clone https://github.com/scatalone/secure-ad-azure-2025.git
+cd secure-ad-azure-2025/scripts
+.\ad-structure-and-users.ps1
+.\bulk-user-creation.ps1
 ⸻
 
 Project Repository Structure
