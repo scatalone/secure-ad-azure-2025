@@ -19,32 +19,33 @@ Overview
 ⸻
 
 Project Repository Structure
+## Project Structure
 
-    Scripts
-	•	bulk-user-creation.ps1￼ – Creates users in bulk from CSV
-	•	ad-structure-and-users.ps1￼ – Builds AD OUs, groups, and users
-	•	users.csv￼ – Sample user data for automation
+### Scripts
+- [bulk-user-creation.ps1](https://github.com/scatalone/secure-ad-azure-2025/blob/main/scripts/bulk-user-creation.ps1) – Creates users in bulk from CSV  
+- [ad-structure-and-users.ps1](https://github.com/scatalone/secure-ad-azure-2025/blob/main/scripts/ad-structure-and-users.ps1) – Builds AD OUs, groups, and users  
+- [users.csv](https://github.com/scatalone/secure-ad-azure-2025/blob/main/scripts/users.csv) – Sample user data  
 
-    Documentation
-	•	Project_Overview.md￼ – High-level project description
-	•	Network_Setup_Guide.md￼ – Azure network and VM configuration
-	•	architecture-overview.md￼ – Logical and physical design
-	•	setup-notes.md￼ – Deployment notes
-	•	security-decisions.md￼ – Security rationale
-	•	GPO_Security_Audit.html￼ – Group Policy audit results
+### Documentation
+- [Project_Overview.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/Project_Overview.md)  
+- [Network_Setup_Guide.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/Network_Setup_Guide.md)  
+- [architecture-overview.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/architecture-overview.md)  
+- [setup-notes.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/setup-notes.md)  
+- [security-decisions.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/security-decisions.md)  
+- [GPO_Security_Audit.html](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/GPO_Security_Audit.html)  
 
-    Images
-	•	01-azure-vnet.png￼
-	•	02-server-2025-vm.png￼
-	•	03-ad-ds-install.png￼
-	•	04-domain-controller-promotion.png￼
-	•	05-ou-structure.png￼
-	•	06-powershell-user-creation.png￼
-	•	07-client-domain-join.png￼
-	•	08-gpo-validation.png￼
+### Images
+- [01-azure-vnet.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/01-azure-vnet.png)  
+- [02-server-2025-vm.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/02-server-2025-vm.png)  
+- [03-ad-ds-install.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/03-ad-ds-install.png)  
+- [04-domain-controller-promotion.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/04-domain-controller-promotion.png)  
+- [05-ou-structure.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/05-ou-structure.png)  
+- [06-powershell-user-creation.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/06-powershell-user-creation.png)  
+- [07-client-domain-join.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/07-client-domain-join.png)  
+- [08-gpo-validation.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/08-gpo-validation.png)  
 
-    Main File
-	•	README.md￼
+### Main File
+- [README.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/README.md)
 
 ⸻
 
