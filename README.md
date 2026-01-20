@@ -37,14 +37,13 @@ The environment simulates a small enterprise domain with:
 
 Clone the repository and run the scripts from an elevated PowerShell session on a Windows Server 2025 VM:
 
-```bash
-git clone https://github.com/scatalone/secure-ad-azure-2025.git
-cd secure-ad-azure-2025/scripts
-.\ad-structure-and-users.ps1
-.\bulk-user-creation.ps1
-⸻
+	git clone https://github.com/scatalone/secure-ad-azure-2025.git
+	cd secure-ad-azure-2025/scripts
+	.\ad-structure-and-users.ps1
+	.\bulk-user-creation.ps1
 
-Project Repository Structure
+
+
 ## Project Structure
 
 ### Scripts
@@ -72,7 +71,6 @@ Project Repository Structure
 
 ### Main File
 - [README.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/README.md)
-
 ⸻
 
 Setup Instructions
