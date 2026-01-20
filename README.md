@@ -1,124 +1,100 @@
-# secure-ad-azure-2025
 
-Secure Active Directory Deployment Using Windows Server 2025 in Azure
+Secure Active Directory in Azure (2025)   
 
-⸻
+Overview
 
-Project Overview
+    This project demonstrates how to design, deploy, and secure an on‑premises style Active Directory environment hosted in Microsoft Azure. It is a hands-on portfolio project showing skills with:
+	•	Windows Server 2025
+	•	Active Directory Domain Services (AD DS)
+	•	PowerShell automation
+	•	Azure infrastructure
 
-This project demonstrates a cloud-hosted Active Directory environment deployed using Windows Server 2025 on Azure Virtual Machines. The setup includes:
-    •    A Windows Server 2025 domain controller (DC)
-    •    A Windows client virtual machine joined to the domain
-    •    Organizational Units (OUs) and Security Groups
-    •    User account creation via PowerShell automation
-    •    Group Policy Objects (GPOs) enforcing security controls
-    •    Documentation and GPO audit for compliance
-
-The domain created is corp.local, with a static private IP for the domain controller to ensure reliable DNS resolution.
-
-⸻
-
-Project Structure
-
-secure-ad-azure-2025/
-├── scripts/
-│   ├── bulk-user-creation.ps1
-│   ├── ad-structure-and-users.ps1
-│   └── users.csv
-├── documentation/
-│   ├── Project_Overview.md
-│   ├── Network_Setup_Guide.md
-│   ├── architecture-overview.md
-│   ├── setup-notes.md
-│   ├── security-decisions.md
-│   └── GPO_Security_Audit.html
-├── images/
-│   ├── 01-azure-vnet.png
-│   ├── 02-server-2025-vm.png
-│   ├── 03-ad-ds-install.png
-│   ├── 04-domain-controller-promotion.png
-│   ├── 05-ou-structure.png
-│   ├── 06-powershell-user-creation.png
-│   ├── 07-client-domain-join.png
-│   └── 08-gpo-validation.png
-└── README.md
-
+    The environment simulates a small enterprise domain with:
+	•	Dedicated domain controller in Azure
+	•	Structured OU and group design
+	•	Automated user and group creation
+	•	Security hardening through Group Policy
+	•	Documentation and visual evidence of configuration
 
 ⸻
 
-Screenshots / Media
+Project Repository Structure
 
-1. Azure Virtual Network & Resource Group
+    Scripts
+	•	bulk-user-creation.ps1￼ – Creates users in bulk from CSV
+	•	ad-structure-and-users.ps1￼ – Builds AD OUs, groups, and users
+	•	users.csv￼ – Sample user data for automation
 
-2. Windows Server 2025 VM Deployment
+    Documentation
+	•	Project_Overview.md￼ – High-level project description
+	•	Network_Setup_Guide.md￼ – Azure network and VM configuration
+	•	architecture-overview.md￼ – Logical and physical design
+	•	setup-notes.md￼ – Deployment notes
+	•	security-decisions.md￼ – Security rationale
+	•	GPO_Security_Audit.html￼ – Group Policy audit results
 
-3. AD DS Installation
+    Images
+	•	01-azure-vnet.png￼
+	•	02-server-2025-vm.png￼
+	•	03-ad-ds-install.png￼
+	•	04-domain-controller-promotion.png￼
+	•	05-ou-structure.png￼
+	•	06-powershell-user-creation.png￼
+	•	07-client-domain-join.png￼
+	•	08-gpo-validation.png￼
 
-4. Domain Controller Promotion
+    Main File
+	•	README.md￼
 
-5. OU and Security Group Structure
+⸻
 
-6. PowerShell User Creation
+Setup Instructions
 
-7. Client VM Domain Join
+    1. Deploy the Azure VM
+	•	Create Windows Server 2025 VM
+	•	Assign a static private IP
+	•	Place VM in a private subnet
+	•	Lock down inbound access using NSGs
 
-8. Group Policy Validation
+    2. Promote to Domain Controller
+	•	Install AD DS
+	•	Create new forest and domain
+	•	Verify DNS functionality
+
+3. Clone the Repository
+
+        git clone https://github.com/scatalone/secure-ad-azure-2025.git
+
+4. Run PowerShell Scripts
+
+        cd scripts
+        .\ad-structure-and-users.ps1
+        .\bulk-user-creation.ps1
 
 
 ⸻
 
-Documentation
-    •    Project Overview: Project_Overview.md￼
-    •    Network Setup Guide: Network_Setup_Guide.md￼
-    •    Architecture Overview: architecture-overview.md￼
-    •    Setup Notes: setup-notes.md￼
-    •    Security Decisions: security-decisions.md￼
-    •    GPO Audit Report: GPO_Security_Audit.html￼
+    Security & Validation
+	•	Least-privilege group design
+	•	Restricted administrative access
+	•	Group Policy hardening
+	•	Separation of users, workstations, and servers
+
+    Validation steps: verify OU/groups, user logon, GPO application, and event logs.
 
 ⸻
 
-Scripts
-    •    bulk-user-creation.ps1 – Creates multiple users from a CSV file.
-    •    ad-structure-and-users.ps1 – Creates OUs, security groups, key user accounts, and assigns users to groups.
-    •    users.csv – Sample user data for automated creation.
-
-Note: Scripts must be run on a Windows Server 2025 VM with Active Directory installed. They cannot run on macOS or Linux PowerShell because the ActiveDirectory module is Windows-only.
-
-⸻
-
-Key Skills Demonstrated
-    •    Azure Virtual Network deployment and configuration
-    •    Windows Server 2025 administration
-    •    Active Directory Domain Services setup
-    •    Organizational Unit and Security Group management
-    •    PowerShell automation for user creation
-    •    Group Policy Object configuration and auditing
-    •    Network and DNS configuration
-    •    Security awareness and documentation
+    Future Enhancements
+	•	Infrastructure as Code (Bicep / Terraform)
+	•	Azure AD / hybrid identity
+	•	Conditional Access policies
+	•	Automated compliance checks
 
 ⸻
 
-How to Use
-    1.    Copy the scripts folder to the domain controller VM.
-    2.    Open PowerShell as Administrator.
-    3.    Navigate to the scripts folder:
+Author
 
-cd C:\AD-Project\scripts
+Scott Catalone
 
-    4.    Run scripts:
-
-.\ad-structure-and-users.ps1
-.\bulk-user-creation.ps1
-
-    5.    Validate users, OUs, and GPOs on the client VM.
-
-⸻
-
-Project Highlights
-    •    Successfully deployed a fully functional AD environment in Azure.
-    •    Automated user creation using PowerShell.
-    •    Applied security best practices via Group Policy.
-    •    Documented architecture, network, and security decisions.
-    •    Captured screenshots and GPO audit reports for validation.
-
+Portfolio project – not production-ready.
 
