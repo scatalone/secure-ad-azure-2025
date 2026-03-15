@@ -1,4 +1,8 @@
-# Secure Active Directory in Azure (2025) ![PowerShell](https://img.shields.io/badge/PowerShell-blue) ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=azure&logoColor=white) ![WindowsServer](https://img.shields.io/badge/Windows%20Server-0052CC?logo=windows&logoColor=white)
+# Secure Active Directory in Azure (2025) 
+Hands-on enterprise AD lab built in Azure with PowerShell automation, GPO hardening, and full documentation.
+
+
+![PowerShell](https://img.shields.io/badge/PowerShell-blue) ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=azure&logoColor=white) ![WindowsServer](https://img.shields.io/badge/Windows%20Server-0052CC?logo=windows&logoColor=white)
 
 ---
 
