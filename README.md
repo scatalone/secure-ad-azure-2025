@@ -1,129 +1,130 @@
-# Secure Active Directory in Azure (2025) 
-Hands-on enterprise AD lab built in Azure with PowerShell automation, GPO hardening, and full documentation.
+# secure-ad-azure-2025
+## Tags
+#ActiveDirectory #Azure #WindowsServer #PowerShell #ITPortfolio
 
+Here’s a professional, complete README.md for your GitHub project. It’s written so recruiters, instructors, or anyone viewing your repo can immediately understand your work. You can copy this into the root of your repo.
 
-![PowerShell](https://img.shields.io/badge/PowerShell-blue) ![Azure](https://img.shields.io/badge/Azure-0078D4?logo=azure&logoColor=white) ![WindowsServer](https://img.shields.io/badge/Windows%20Server-0052CC?logo=windows&logoColor=white)
-
----
-
-## Table of Contents
-- [Overview](#overview)  
-- [Quick Start](#quick-start)  
-- [Project Structure](#project-structure)  
-- [Setup Instructions](#setup-instructions)  
-- [Scripts Overview](#scripts-overview)  
-- [Security & Validation](#security--validation)  
-- [Future Enhancements](#future-enhancements)  
-- [Author](#author)  
-
----
-
-## Overview
-
-This project demonstrates how to design, deploy, and secure an on-premises style Active Directory environment hosted in Microsoft Azure. It is a **hands-on portfolio project** showing skills with:
-
-- Windows Server 2025  
-- Active Directory Domain Services (AD DS)  
-- PowerShell automation  
-- Azure infrastructure  
-
-The environment simulates a small enterprise domain with:
-
-- Dedicated domain controller in Azure  
-- Structured OU and group design  
-- Automated user and group creation  
-- Security hardening through Group Policy  
-- Documentation and visual evidence of configuration  
-
----
-
-## Quick Start
-
-Clone the repository and run the scripts from an elevated PowerShell session on a Windows Server 2025 VM:
-
-	git clone https://github.com/scatalone/secure-ad-azure-2025.git
-	cd secure-ad-azure-2025/scripts
-	.\ad-structure-and-users.ps1
-	.\bulk-user-creation.ps1
-
-
-
-## Project Structure
-
-### Scripts
-- [bulk-user-creation.ps1](https://github.com/scatalone/secure-ad-azure-2025/blob/main/scripts/bulk-user-creation.ps1) – Creates users in bulk from CSV  
-- [ad-structure-and-users.ps1](https://github.com/scatalone/secure-ad-azure-2025/blob/main/scripts/ad-structure-and-users.ps1) – Builds AD OUs, groups, and users  
-- [users.csv](https://github.com/scatalone/secure-ad-azure-2025/blob/main/scripts/users.csv) – Sample user data  
-
-### Documentation
-- [Project_Overview.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/Project_Overview.md)  
-- [Network_Setup_Guide.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/Network_Setup_Guide.md)  
-- [architecture-overview.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/architecture-overview.md)  
-- [setup-notes.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/setup-notes.md)  
-- [security-decisions.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/security-decisions.md)  
-- [GPO_Security_Audit.html](https://github.com/scatalone/secure-ad-azure-2025/blob/main/documentation/GPO_Security_Audit.html)  
-
-### Images
-- [01-azure-vnet.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/01-azure-vnet.png)  
-- [02-server-2025-vm.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/02-server-2025-vm.png)  
-- [03-ad-ds-install.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/03-ad-ds-install.png)  
-- [04-domain-controller-promotion.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/04-domain-controller-promotion.png)  
-- [05-ou-structure.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/05-ou-structure.png)  
-- [06-powershell-user-creation.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/06-powershell-user-creation.png)  
-- [07-client-domain-join.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/07-client-domain-join.png)  
-- [08-gpo-validation.png](https://github.com/scatalone/secure-ad-azure-2025/blob/main/images/08-gpo-validation.png)  
-
-### Main File
-- [README.md](https://github.com/scatalone/secure-ad-azure-2025/blob/main/README.md)
 ⸻
 
-Setup Instructions
+Secure Active Directory Deployment Using Windows Server 2025 in Azure
 
-    1. Deploy the Azure VM
-	•	Create Windows Server 2025 VM
-	•	Assign a static private IP
-	•	Place VM in a private subnet
-	•	Lock down inbound access using NSGs
+⸻
 
-    2. Promote to Domain Controller
-	•	Install AD DS
-	•	Create new forest and domain
-	•	Verify DNS functionality
+Project Overview
 
-3. Clone the Repository
+This project demonstrates a cloud-hosted Active Directory environment deployed using Windows Server 2025 on Azure Virtual Machines. The setup includes:
+    •    A Windows Server 2025 domain controller (DC)
+    •    A Windows client virtual machine joined to the domain
+    •    Organizational Units (OUs) and Security Groups
+    •    User account creation via PowerShell automation
+    •    Group Policy Objects (GPOs) enforcing security controls
+    •    Documentation and GPO audit for compliance
 
-        git clone https://github.com/scatalone/secure-ad-azure-2025.git
+The domain created is corp.local, with a static private IP for the domain controller to ensure reliable DNS resolution.
 
-4. Run PowerShell Scripts
+⸻
 
-        cd scripts
-        .\ad-structure-and-users.ps1
-        .\bulk-user-creation.ps1
+Project Structure
+
+secure-ad-azure-2025/
+├── scripts/
+│   ├── bulk-user-creation.ps1
+│   ├── ad-structure-and-users.ps1
+│   └── users.csv
+├── documentation/
+│   ├── Project_Overview.md
+│   ├── Network_Setup_Guide.md
+│   ├── architecture-overview.md
+│   ├── setup-notes.md
+│   ├── security-decisions.md
+│   └── GPO_Security_Audit.html
+├── images/
+│   ├── 01-azure-vnet.png
+│   ├── 02-server-2025-vm.png
+│   ├── 03-ad-ds-install.png
+│   ├── 04-domain-controller-promotion.png
+│   ├── 05-ou-structure.png
+│   ├── 06-powershell-user-creation.png
+│   ├── 07-client-domain-join.png
+│   └── 08-gpo-validation.png
+└── README.md
 
 
 ⸻
 
-    Security & Validation
-	•	Least-privilege group design
-	•	Restricted administrative access
-	•	Group Policy hardening
-	•	Separation of users, workstations, and servers
+Screenshots / Media
 
-    Validation steps: verify OU/groups, user logon, GPO application, and event logs.
+1. Azure Virtual Network & Resource Group
+
+2. Windows Server 2025 VM Deployment
+
+3. AD DS Installation
+
+4. Domain Controller Promotion
+
+5. OU and Security Group Structure
+
+6. PowerShell User Creation
+
+7. Client VM Domain Join
+
+8. Group Policy Validation
+
 
 ⸻
 
-    Future Enhancements
-	•	Infrastructure as Code (Bicep / Terraform)
-	•	Azure AD / hybrid identity
-	•	Conditional Access policies
-	•	Automated compliance checks
+Documentation
+    •    Project Overview: Project_Overview.md￼
+    •    Network Setup Guide: Network_Setup_Guide.md￼
+    •    Architecture Overview: architecture-overview.md￼
+    •    Setup Notes: setup-notes.md￼
+    •    Security Decisions: security-decisions.md￼
+    •    GPO Audit Report: GPO_Security_Audit.html￼
 
 ⸻
 
-Author
+Scripts
+    •    bulk-user-creation.ps1 – Creates multiple users from a CSV file.
+    •    ad-structure-and-users.ps1 – Creates OUs, security groups, key user accounts, and assigns users to groups.
+    •    users.csv – Sample user data for automated creation.
 
-Scott Catalone
+Note: Scripts must be run on a Windows Server 2025 VM with Active Directory installed. They cannot run on macOS or Linux PowerShell because the ActiveDirectory module is Windows-only.
 
-Portfolio project – not production-ready.
+⸻
+
+Key Skills Demonstrated
+    •    Azure Virtual Network deployment and configuration
+    •    Windows Server 2025 administration
+    •    Active Directory Domain Services setup
+    •    Organizational Unit and Security Group management
+    •    PowerShell automation for user creation
+    •    Group Policy Object configuration and auditing
+    •    Network and DNS configuration
+    •    Security awareness and documentation
+
+⸻
+
+How to Use
+    1.    Copy the scripts folder to the domain controller VM.
+    2.    Open PowerShell as Administrator.
+    3.    Navigate to the scripts folder:
+
+cd C:\AD-Project\scripts
+
+    4.    Run scripts:
+
+.\ad-structure-and-users.ps1
+.\bulk-user-creation.ps1
+
+    5.    Validate users, OUs, and GPOs on the client VM.
+
+⸻
+
+Project Highlights
+    •    Successfully deployed a fully functional AD environment in Azure.
+    •    Automated user creation using PowerShell.
+    •    Applied security best practices via Group Policy.
+    •    Documented architecture, network, and security decisions.
+    •    Captured screenshots and GPO audit reports for validation.
+
 
